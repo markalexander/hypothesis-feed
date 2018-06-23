@@ -4,13 +4,18 @@ import json
 import requests
 from datetime import datetime
 from pyatom import AtomFeed
-from flask import Flask, request, Response
+from flask import Flask, request, Response, redirect, url_for
 from flask_caching import Cache
 from config import Config as cfg
 
 
 app = Flask(__name__)
 cache = Cache(app, config={'CACHE_TYPE': cfg.cache_type})
+
+
+@app.route('/')
+def index():
+    return redirect(url_for('atom'))
 
 
 @app.route('/feed.atom')
