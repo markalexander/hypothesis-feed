@@ -27,11 +27,11 @@ def atom():
                     author=cfg.FEED_AUTHOR)
     r = requests.get('https://hypothes.is/api/search?group=%s' % cfg.HYPOTHESIS_GROUP_ID,
                      headers={'Authorization': 'Bearer %s' % cfg.HYPOTHESIS_API_TOKEN})
-    for row in json.loads(r.text)['rows']:
-        feed.add(title=row['document']['title'][0], content=row['text'],
-                 content_type='text', author=row['user'], url=row['links']['html'],
-                 updated=datetime.strptime(row['updated'][:-13], '%Y-%m-%dT%H:%M:%S'),
-                 published=datetime.strptime(row['created'][:-13], '%Y-%m-%dT%H:%M:%S'))
+    for post in json.loads(r.text)['rows']:
+        feed.add(title=post['document']['title'][0], content=post['text'],
+                 content_type='text', author=post['user'], url=post['links']['html'],
+                 updated=datetime.strptime(post['updated'][:-13], '%Y-%m-%dT%H:%M:%S'),
+                 published=datetime.strptime(post['created'][:-13], '%Y-%m-%dT%H:%M:%S'))
     return Response(feed.to_string(), mimetype='application/atom+xml')
 
 
