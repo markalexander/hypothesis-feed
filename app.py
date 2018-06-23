@@ -5,7 +5,7 @@ import requests
 from datetime import datetime
 from pyatom import AtomFeed
 from flask import Flask, request, Response
-from flask.ext.cache import Cache
+from flask_caching import Cache
 
 token = '6879-be75929bd9dda036fd326ce112ecf65f'  # https://hypothes.is/account/developer
 group = 'LLaJXJ4w'  # E.g. from the group stream URI
