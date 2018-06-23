@@ -3,7 +3,7 @@
 
 class Config:
 
-    token = '6879-be75929bd9dda036fd326ce112ecf65f'  # https://hypothes.is/account/developer
-    group = 'LLaJXJ4w'  # E.g. from the group stream URI
-    cache_type = 'simple'
-    cache_timeout = 600  # In seconds
+    HYPOTHESIS_API_TOKEN = '6879-ePfAT2QxkljeKUbZQtJkYF7kU6kBTEMHP_PO_3R5I3A'  # https://hypothes.is/account/developer
+    HYPOTHESIS_GROUP_ID = 'LLaJXJ4w'  # E.g. from the group stream URI
+    CACHE_TYPE = 'simple'
+    CACHE_TIMEOUT = 600  # In seconds

@@ -10,7 +10,7 @@ from config import Config as cfg
 
 
 app = Flask(__name__)
-cache = Cache(app, config={'CACHE_TYPE': cfg.cache_type})
+cache = Cache(app, config={'CACHE_TYPE': cfg.CACHE_TYPE})
 
 
 @app.route('/')
@@ -19,14 +19,14 @@ def index():
 
 
 @app.route('/feed.atom')
-@cache.cached(timeout=cfg.cache_timeout)
+@cache.cached(timeout=cfg.CACHE_TIMEOUT)
 def atom():
     feed = AtomFeed(title='Machine Learning and Pattern Recognition - Hypothes.is Feed',
                     feed_url=request.url,
-                    url='https://hypothes.is/stream?q=group:%s' % cfg.group,
+                    url='https://hypothes.is/stream?q=group:%s' % cfg.HYPOTHESIS_GROUP_ID,
                     author='Iain Murray')
-    r = requests.get('https://hypothes.is/api/search?group=%s' % cfg.group,
-                     headers={'Authorization': 'Bearer %s' % cfg.token})
+    r = requests.get('https://hypothes.is/api/search?group=%s' % cfg.HYPOTHESIS_GROUP_ID,
+                     headers={'Authorization': 'Bearer %s' % cfg.HYPOTHESIS_API_TOKEN})
     for row in json.loads(r.text)['rows']:
         feed.add(title=row['document']['title'][0], content=row['text'],
                  content_type='text', author=row['user'], url=row['links']['html'],
