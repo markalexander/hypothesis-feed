@@ -20,3 +20,6 @@ want a free/simple solution).  There are many tutorials around for running Flask
 
 Required packages are listed in the requirements.txt file, and can be installed with `pip install -r requirements.txt`
 if you need to do this manually.
+
+Once you have the environment set up to run the app, you'll need to set your own configuration.  Copy the file
+`config.example.py` to `config.py`, then edit the settings inside.
