@@ -21,10 +21,10 @@ def index():
 @app.route('/feed.atom')
 @cache.cached(timeout=cfg.CACHE_TIMEOUT)
 def atom():
-    feed = AtomFeed(title='Machine Learning and Pattern Recognition - Hypothes.is Feed',
+    feed = AtomFeed(title=cfg.FEED_TITLE,
                     feed_url=request.url,
                     url='https://hypothes.is/stream?q=group:%s' % cfg.HYPOTHESIS_GROUP_ID,
-                    author='Iain Murray')
+                    author=cfg.FEED_AUTHOR)
     r = requests.get('https://hypothes.is/api/search?group=%s' % cfg.HYPOTHESIS_GROUP_ID,
                      headers={'Authorization': 'Bearer %s' % cfg.HYPOTHESIS_API_TOKEN})
     for row in json.loads(r.text)['rows']:
