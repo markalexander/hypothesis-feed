@@ -2,7 +2,7 @@
 # [Hypothes.is](https://hypothes.is) feed server
 
 This simple app serves up an Atom feed of posts to a given
-[hypothes.is](https://hypothes.is) group.  This is useful for e.g. allowing
+[hypothes.is](https://hypothes.is) group, **including private groups**.  This is useful for e.g. allowing
 group members to receive updates to their email rather than having to check
 the group stream regularly.
 
@@ -42,9 +42,11 @@ and edit the settings inside before running the app.
 
 I made this module for a course I was taking some time ago, so it may be that
 hypothes.is will add their own feed to groups and this will become redundant.
+There are already feeds for public content (see the hypothes.is help docs),
+but none for private groups (as far as I'm aware).
 
-Also, I'm no longer running this myself for the course in question, so though it
-works at the time of writing, I won't automatically notice any bugs or API
-changes.  If you still use it and want me to fix it, just contact me or add an
-issue here.  I'll try to get around to it as soon as I can.  Alternatively, you
-can fix it yourself and submit a pull request.
+Also, I'm no longer running this myself for the course in question.  So,
+though it works at the time of writing, I won't automatically notice any bugs
+or API changes.  If you still use it and want me to fix it, just contact me or
+add an issue here.  I'll try to get around to it as soon as I can.  Alternatively,
+you can fix it yourself and submit a pull request.
