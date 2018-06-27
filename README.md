@@ -26,8 +26,7 @@ Repeat steps 3-5 whenever you want to run the app.
 There are a number of ways to do this.  The simplest is perhaps to follow the
 local instructions and use [ngrok](https://ngrok.com/) to setup a public URL.
 However, the local development server is not designed to be used in this way,
-so this is advisable only for e.g. personal use when you are not at home but
-can leave your computer on.
+so this is advisable only for testing purposes.
 
 Many other services are available to run Python apps on the web.  In general,
 you'll need some kind of WSGI setup to run the app.
@@ -35,8 +34,8 @@ you'll need some kind of WSGI setup to run the app.
 you don't have much experience (or just want a free/simple solution).  There are
 many tutorials around for running Flask apps on there.
 
-As in the local setup, you will have to copy `config.example.py` to `config.py` and edit the
-settings inside before running the app.
+As in the local setup, you will have to copy `config.example.py` to `config.py`
+and edit the settings inside before running the app.
 
 
 ## Notes and contributing
