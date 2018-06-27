@@ -1,5 +1,5 @@
 
-# Hypothes.is feed generator
+# [Hypothes.is](https://hypothes.is) feed server
 
 This simple app serves up an Atom feed of posts to a given
 [hypothes.is](https://hypothes.is) group.  This is useful for e.g. allowing
