@@ -24,7 +24,7 @@ Repeat steps 3-5 whenever you want to run the app.
 ### Allowing others to access the feed
 
 There are a number of ways to do this.  The simplest is perhaps to follow the
-local instructions and use [ngrok](https://ngrok.com/) to setup a public URL.
+local instructions and use [ngrok](https://ngrok.com/) to set up a public URL.
 However, the local development server is not designed to be used in this way,
 so this is advisable only for testing purposes.
 
