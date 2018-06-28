@@ -14,12 +14,12 @@ the group stream regularly.
 The following assumes you have Python, pip, and virtualenv already installed.
 
   1. Copy the file `config.example.py` to `config.py`, and edit the settings inside.
-  2. Create a new virtual environment in the `hypothesis-feed` directory with `virtualenv venv`
+  2. Create a new virtual environment in the `hypothesis-feed` directory by running `virtualenv venv`
   3. Activate it with `source venv/bin/activate`.
   4. Install the required packages using `pip install -r requirements.txt`.
   5. Run the app with `python app.py`.
   
-Repeat steps 3-5 whenever you want to run the app.
+Repeat steps 3 and 5 whenever you want to run the app.
 
 ### Allowing others to access the feed
 
